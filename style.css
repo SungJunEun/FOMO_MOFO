@@ -1,0 +1,105 @@
+:root {
+  /* Color */
+  --color-pink: #f367b6;
+  --color-purple: #3d285d;
+  --color-blue: #1aaecb;
+}
+/* =========================================
+General
+==========================================*/
+* {
+  box-sizing: border-box
+}
+
+body {
+  margin: 0;
+  font-size: 1rem;
+  font-family: 'Rowdies', cursive;
+}
+
+img {
+  max-width: 100%;
+  display: inline-block;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  font-family: inherit;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: minmax(1em,1fr) repeat(3,1fr) minmax(1em, 1fr);
+}
+
+/* =========================================
+Typography
+==========================================*/
+
+h1 {
+  font-size: 1.5rem;
+}
+
+h2 {
+  font-size: 1.125rem;
+}
+
+.nav-item,
+.btn {
+  text-transform: uppercase;
+}
+
+.btn,
+.footer-email {
+  font-size: 0.875rem;
+}
+
+i {
+  font-size: 2rem;
+}
+
+/* =========================================
+nav
+==========================================*/
+nav > * {
+  grid-column: 2 / -2;
+  grid-row: 0;
+}
+
+ul {
+  display: none;
+}
+
+.nav-logo {
+  width: 200px;
+}
+
+/* =========================================
+header
+==========================================*/
+
+header > * {
+  grid-column: 2 / -2;
+}
+
+/* =========================================
+main
+==========================================*/
+main > * {
+  grid-column: 2 / -2;
+}
+
+/* =========================================
+footer
+==========================================*/
+
+footer > * {
+  grid-column: 2 / -2;
+}
