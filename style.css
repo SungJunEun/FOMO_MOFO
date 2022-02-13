@@ -51,6 +51,13 @@ button {
   grid-template-columns: minmax(1em,1fr) minmax(0px, 500px) minmax(1em, 1fr);
 }
 
+@media (min-width: 950px) {
+  .grid {
+    grid-template-columns: minmax(1em,1fr) repeat(3,minmax(0px, 360px)) minmax(1em, 1fr);
+
+  }
+}
+
 /* =========================================
 Typography
 ==========================================*/
@@ -83,7 +90,7 @@ nav
 ==========================================*/
 nav {
   grid-row: 1;
-
+  margin-bottom: 1.5em;
 }
 
 ul {
@@ -99,18 +106,28 @@ ul {
   justify-self: end;
 }
 
+.nav-closed-img {
+  width: 40px;
+  fill: white;
+  padding-bottom: 20px;
+}
+
 /* =========================================
 header
 ==========================================*/
 header {
+  background-color: var(--color-purple);
   background: url(../imgs/bg.jpg);
+  background-position: center;
+  background-size: cover;
   padding: 3em 0;
 }
 header > * {
-  grid-column: 2;
+  grid-column: 2 /-2;
 }
 
 .header-subtitle {
+  grid-column: 2 / span 2;
   font-weight: 300;
 }
 
@@ -136,13 +153,26 @@ main {
   padding: 3em 0;
   background: var(--color-pink);
   text-align: center;
+  gap: 0 1em;
 }
 main > * {
-  grid-column: 2;
+  grid-column: 2 /-2;
 }
 
-.main-section {
-  width: 80%:
+@media (min-width: 950px) {
+  main > * {
+    grid-row: 1;
+  }
+
+  .main-section:first-child {
+    grid-column: 2;
+  }
+  .main-section:nth-child(2) {
+    grid-column: 3;
+  }
+  .main-section:nth-child(3) {
+    grid-column: 4;
+  }
 }
 
 /* =========================================
@@ -154,7 +184,7 @@ footer {
   background: grey;
 }
 footer > * {
-  grid-column: 2;
+  grid-column: 2 /-2;
 }
 
 .footer-logo,
@@ -181,4 +211,18 @@ footer > * {
 
 .footer-icons i {
   margin: 0 0.25em;
+}
+
+@media (min-width: 950px) {
+  .footer-icons {
+    grid-row: 1;
+    grid-column: -3;
+    justify-self: end;
+  }
+
+  .footer-main {
+    text-align: left;
+    grid-column: 2 / span 2;
+    grid-row: 1 / -1;
+  }
 }
