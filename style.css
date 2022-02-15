@@ -93,6 +93,18 @@ nav {
   margin-bottom: 1.5em;
 }
 
+.nav-items,
+.nav-close {
+  transition: color, transform 250ms;
+}
+
+.nav-item:hover,
+.nav-item:focus,
+.nav-close:hover,
+.nav-close:focus {
+  color: var(--color-pink);
+}
+
 .nav-items {
   position: fixed;
   background-color: black;
@@ -106,8 +118,12 @@ nav {
   justify-content: center;
   z-index: 2;
   font-size: 2rem;
-  transition: all 250ms;
   text-align: center;
+  transform: translateX(100%);
+}
+
+.menu-open {
+  transform: translateX(0);
 }
 
 .nav-close {
@@ -115,11 +131,6 @@ nav {
   top: 0;
   right: 0.5em;
   font-size: 2em;
-}
-
-.nav-item:hover,
-.nav-item:focus {
-  color: var(--color-pink);
 }
 
 .nav-logo {
@@ -153,7 +164,16 @@ nav {
   }
 
   .nav-items {
-    //display: flex;
+    display: flex;
+    position: initial;
+    transform: translateX(0);
+    background-color: transparent;
+    font-size:inherit;
+    justify-content: start;
+  }
+
+  .nav-close {
+    display: none;
   }
 
   .nav-item {
