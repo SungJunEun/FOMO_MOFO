@@ -20,6 +20,7 @@
 I used..
 - HTML
 - CSS 
+- JS
 - Replit
 
 with Github.
@@ -37,11 +38,12 @@ with Github.
             ![스크린샷, 2022-02-16 13-14-44](https://user-images.githubusercontent.com/60536942/154195026-13d3f99d-75c9-4697-add1-1e466b737955.png)
 
 
--  ### Navgiator menu
-    - By applying different CSS classes to the `menu_btn` element's click event handler, Menu toggles as we click the menu button.
-    - `Addscroll` function for each menu(`About me`, `Let's talk!`) to scroll to the applied section.
+-  ### Navgiator menu on mobile
+    - `position:fixed` with `top,left,right,bottom:0` to make the naivgator menu fit the entire page.
+    - `transform:translateX(100%)` on default, so that navigator menu is not shown unless the button is clicked.
+    
+    ![ezgif com-gif-maker](https://user-images.githubusercontent.com/60536942/154234893-f9c3847b-5422-4099-85fb-ecbf4c917707.gif)
 
-    ![ezgif com-gif-maker](https://user-images.githubusercontent.com/60536942/139528508-a9a0fc72-6241-432e-9e19-35ccc7ae7786.gif)
 
 
 
